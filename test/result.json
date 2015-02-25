@@ -1,0 +1,193 @@
+{
+  "apiErrors": [],
+  "documentSize": 115961,
+  "globalStats": {
+    "errorDensity": "143",
+    "warningDensity": "11",
+    "allDensity": "154",
+    "stdDev": "378"
+  },
+  "message": "success",
+  "request": {
+    "certainty": "0",
+    "docID": "ECE9CC3A-5090-8B72-E5D7-8BD327B4B025",
+    "importance": "1",
+    "key": "null",
+    "level": "AAA",
+    "priority": "0",
+    "ref": "0",
+    "reportID": "FF14EB86-FC99-6E6D-9858-2C58501E2085",
+    "responseID": "2dd4c024b8cd8e228388215ec7d8335a",
+    "systemID": "DEFAULT_SYSTEM",
+    "uaString": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36",
+    "url": "http://www.google.com",
+    "viewport": {
+      "height": 768,
+      "width": 1024
+    },
+    "fragment": "0",
+    "store": "1"
+  },
+  "responseExecTime": "2.13",
+  "responseTime": "2015-02-25T00:08:06.427Z",
+  "resultSet": [
+    {
+      "bpID": 8,
+      "certainty": 100,
+      "errorDescription": "Code was found which uses deprecated methods to define colors. This sometimes cannot be overridden or disabled by custom CSS or by turning CSS off.",
+      "errorSnippet": "<body class=\"hp vasq\" onload=\"try{if(!google.j.b){document.f&amp;&amp;document.f.q.focus();document.gbqf&amp;&amp;document.gbqf.q.focus();}}catch(e){}if(document.images)new Image().src='/images/nav_logo195.png'\" alink=\"#dd4b39\" bgcolor",
+      "errorTitle": "Document uses deprecated color definition",
+      "position": {
+        "column": 48,
+        "line": 35
+      },
+      "priority": 70,
+      "ref": "null",
+      "resultTitle": "Ensure content and components are readable with CSS turned off",
+      "signature": "b5ac3220b46cbef8eeb823c49f5d3547",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.2 Meaningful Sequence"
+      ],
+      "tID": 14,
+      "xpath": "/html/body"
+    },
+    {
+      "bpID": 18,
+      "certainty": 100,
+      "errorDescription": "Do not use deprecated elements. They cannot be overridden by the user.",
+      "errorSnippet": "<center><div style=\"height:231px;margin-top:20px\" id=\"lga\"><img alt=\"Google\" height=\"95\" id=\"hplogo\" src=\"/images/srpr/logo11w.png\" style=\"padding-top:112px\" width=\"269\" onload=\"window.lol&amp;&amp;lol()\"></div><div sty",
+      "errorTitle": "Deprecated elements found",
+      "position": {
+        "column": 12920,
+        "line": 35
+      },
+      "priority": 33,
+      "ref": "null",
+      "resultTitle": "Avoid deprecated markup",
+      "signature": "2d40c9c31b9b9dbd64bad6b8fee30d50",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 4.1.1 Parsing"
+      ],
+      "tID": 16,
+      "xpath": "/html/body/div[1]/div[4]/span[1]/center[1]"
+    },
+    {
+      "bpID": 15,
+      "certainty": 100,
+      "errorDescription": "Presentational elements such as FONT and CENTER are often difficult or impossible to override with user styles or by disabling CSS. Since these elements are purely presentational, replace them with CSS.",
+      "errorSnippet": "<center><div style=\"height:231px;margin-top:20px\" id=\"lga\"><img alt=\"Google\" height=\"95\" id=\"hplogo\" src=\"/images/srpr/logo11w.png\" style=\"padding-top:112px\" width=\"269\" onload=\"window.lol&amp;&amp;lol()\"></div><div sty",
+      "errorTitle": "Deprecated typography coding found",
+      "position": {
+        "column": 12920,
+        "line": 35
+      },
+      "priority": 73,
+      "ref": "null",
+      "resultTitle": "Use CSS to control visual presentation of text",
+      "signature": "aa65bd6b197a6c46e9705f6652d845fe",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AA: 1.4.5 Images of Text"
+      ],
+      "tID": 26,
+      "xpath": "/html/body/div[1]/div[4]/span[1]/center[1]"
+    },
+    {
+      "bpID": 49,
+      "certainty": 100,
+      "errorDescription": "Provide a label for all controls. This allows all users to understand the type of information expected in the field.",
+      "errorSnippet": "<input id=\"gbqfq\" class=\"gbqfif\" name=\"q\" type=\"text\" autocomplete=\"off\" value=\"\" aria-haspopup=\"false\" role=\"combobox\" aria-autocomplete=\"both\" style=\"border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: non",
+      "errorTitle": "Form element has no label",
+      "position": {
+        "column": 0,
+        "line": 35
+      },
+      "priority": 76,
+      "ref": "null",
+      "resultTitle": "Provide explicit labels for form fields",
+      "signature": "ccb5e837a9e77cb62399291d02d0b67b",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.1.1 Non-text Content",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 1.3.1 Info and Relationships",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 3.3.2 Labels or Instructions",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 4.1.2 Name, Role, Value"
+      ],
+      "tID": 38,
+      "xpath": "/html/body/div[1]/div[2]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/form[1]/fieldset[2]/div[1]/div[1]/div[1]/div[1]/div[3]/div[1]/input[1]"
+    },
+    {
+      "bpID": 106,
+      "certainty": 100,
+      "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
+      "errorSnippet": "<a class=\"gb_D gb_Ta\" href=\"http://www.google.com/intl/en/options/\" title=\"Apps\" aria-haspopup=\"true\" aria-expanded=\"false\" data-ved=\"0CAUQvSc\" data-eqid=\"0click\"></a>",
+      "errorTitle": "Blank link text found",
+      "position": {
+        "column": 0,
+        "line": 10
+      },
+      "priority": 100,
+      "ref": "null",
+      "resultTitle": "Ensure link text (and alternate text for images, when used as links) describes the destination or purpose of the link.",
+      "signature": "cc27d844adc20bc48178cae143fb4bc7",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 2.4.4 Link Purpose (In Context)",
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level AAA: 2.4.9 Link Purpose (Link Only)"
+      ],
+      "tID": 57,
+      "xpath": "/html/body/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/a[1]"
+    },
+    {
+      "bpID": 178,
+      "certainty": 100,
+      "errorDescription": "Elements were found with role attributes that should be replaced with native semantics",
+      "errorSnippet": "<a class=\"_Gs\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" role=\"button\" jsaction=\"foot.cst\">Settings</a>",
+      "errorTitle": "Do not apply 'role' attribute where native semantics are available",
+      "position": {
+        "column": 0,
+        "line": 22
+      },
+      "priority": 89,
+      "ref": "null",
+      "resultTitle": "Do not apply 'role' attribute where native semantics are available",
+      "signature": "d755cfc06860bca16122aedbee1cdc06",
+      "standards": [
+        "Web Content Accessibility Guidelines (WCAG) 2.0, Level A: 4.1.2 Name, Role, Value"
+      ],
+      "tID": 58,
+      "xpath": "/html/body/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/span[1]/span[1]/a[1]"
+    }
+  ],
+  "resultSummary": {
+    "density": {
+      "allDensity": 5,
+      "errorDensity": 5,
+      "warningDensity": 0
+    },
+    "issues": {
+      "totalErrors": 6,
+      "totalIssues": 6,
+      "totalWarnings": 0
+    },
+    "issuesByLevel": {
+      "A": {
+        "count": 5,
+        "pct": 83.33
+      },
+      "AA": {
+        "count": 1,
+        "pct": 16.67
+      },
+      "AAA": {
+        "count": 1,
+        "pct": 16.67
+      }
+    },
+    "tests": {
+      "failing": 6,
+      "passing": 50,
+      "total": 56
+    }
+  },
+  "sourceHash": "d00a295ccf85b4bcf7043db12071e025",
+  "status": 200,
+  "clientScriptErrors": []
+}

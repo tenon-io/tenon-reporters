@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="{{request.reportID}}" errors="{{apiErrors.length}}" tests="{{resultSummary.tests.total}}" failures="{{resultSet.length}}" time="{{responseExecTime}}" timestamp="{{responseTime}}">
+        <properties>
+            <property name="certainty" value="{{request.certainty}}"/>
+            <property name="docID" value="{{request.docID}}"/>
+            <property name="importance" value="{{request.importance}}"/>
+            <property name="key" value="{{request.key}}"/>
+            <property name="level" value="{{request.level}}"/>
+            <property name="priority" value="{{request.priority}}"/>
+            <property name="ref" value="{{request.ref}}"/>
+            <property name="responseID" value="{{request.responseID}}"/>
+            <property name="systemID" value="{{request.systemID}}"/>
+            <property name="uaString" value="{{request.uaString}}"/>
+            <property name="url" value="{{request.url}}"/>
+            <property name="viewport.height" value="{{request.viewport.height}}"/>
+            <property name="viewport.width" value="{{request.viewport.width}}"/>
+            <property name="fragment" value="{{request.fragment}}"/>
+            <property name="store" value="{{request.store}}"/>
+            {{#isStored}}
+            <property name="store.responseDetails" value="http://tenon:8888/api/results.php?responseID={{request.responseID}}"/>
+            {{/isStored}}
+        </properties>
+        {{#apiErrors}}
+        <testcase classname="{{sourceId}}" name="{{tID}}" time="-1">
+            <error message="{{message}}">{{line}}</error>
+        </testcase>
+        {{/apiErrors}}
+        {{#resultSet}}
+        <testcase classname="{{xpath}}" name="{{errorTitle}}" time="-1">
+            <failure message="{{resultTitle}}">{{errorSnippet}}</failure>
+        </testcase>
+        {{/resultSet}}
+    </testsuite>
+</testsuites>
