@@ -1,10 +1,10 @@
 # Tenon JSON to xUnit
 
-[![Build Status](https://secure.travis-ci.org/poorgeek/tenon-json-to-xunit.png?branch=master)](http://travis-ci.org/poorgeek/tenon-json-to-xunit)
+[![Build Status](https://secure.travis-ci.org/poorgeek/tenon-reporters.png?branch=master)](http://travis-ci.org/poorgeek/tenon-reporters)
 
 ## Getting Started
 
-Install the module with: `npm install tenon-json-to-xunit --save`
+Install the module with: `npm install tenon-reporters --save`
 
 ## Documentation
 

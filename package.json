@@ -1,17 +1,17 @@
 {
-  "name": "tenon-json-to-xunit",
+  "name": "tenon-reporters",
   "version": "0.1.0",
   "main": "lib/convert.js",
   "description": "Convert the Tenon's JSON response to the xUnit XML format",
-  "homepage": "https://github.com/poorgeek/tenon-json-to-xunit",
-  "bugs": "https://github.com/poorgeek/tenon-json-to-xunit/issues",
+  "homepage": "https://github.com/poorgeek/tenon-reporters",
+  "bugs": "https://github.com/poorgeek/tenon-reporters/issues",
   "author": {
     "name": "Justin Stockton",
     "email": "poorgeek@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/poorgeek/tenon-json-to-xunit"
+    "url": "https://github.com/poorgeek/tenon-reporters"
   },
   "license": "MIT",
   "files": [
