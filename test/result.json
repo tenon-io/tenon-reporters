@@ -20,7 +20,7 @@
     "responseID": "2dd4c024b8cd8e228388215ec7d8335a",
     "systemID": "DEFAULT_SYSTEM",
     "uaString": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.114 Safari/537.36",
-    "url": "http://www.google.com",
+    "url": "http://www.example.com",
     "viewport": {
       "height": 768,
       "width": 1024
@@ -35,7 +35,7 @@
       "bpID": 8,
       "certainty": 100,
       "errorDescription": "Code was found which uses deprecated methods to define colors. This sometimes cannot be overridden or disabled by custom CSS or by turning CSS off.",
-      "errorSnippet": "<body class=\"hp vasq\" onload=\"try{if(!google.j.b){document.f&amp;&amp;document.f.q.focus();document.gbqf&amp;&amp;document.gbqf.q.focus();}}catch(e){}if(document.images)new Image().src='/images/nav_logo195.png'\" alink=\"#dd4b39\" bgcolor",
+      "errorSnippet": "<body class=\"hp vasq\" onload=\"try{if(!example.j.b){document.f&amp;&amp;document.f.q.focus();document.gbqf&amp;&amp;document.gbqf.q.focus();}}catch(e){}if(document.images)new Image().src='/images/nav_logo195.png'\" alink=\"#dd4b39\" bgcolor",
       "errorTitle": "Document uses deprecated color definition",
       "position": {
         "column": 48,
@@ -55,7 +55,7 @@
       "bpID": 18,
       "certainty": 100,
       "errorDescription": "Do not use deprecated elements. They cannot be overridden by the user.",
-      "errorSnippet": "<center><div style=\"height:231px;margin-top:20px\" id=\"lga\"><img alt=\"Google\" height=\"95\" id=\"hplogo\" src=\"/images/srpr/logo11w.png\" style=\"padding-top:112px\" width=\"269\" onload=\"window.lol&amp;&amp;lol()\"></div><div sty",
+      "errorSnippet": "<center><div style=\"height:231px;margin-top:20px\" id=\"lga\"><img alt=\"example\" height=\"95\" id=\"hplogo\" src=\"/images/srpr/logo11w.png\" style=\"padding-top:112px\" width=\"269\" onload=\"window.lol&amp;&amp;lol()\"></div><div sty",
       "errorTitle": "Deprecated elements found",
       "position": {
         "column": 12920,
@@ -75,7 +75,7 @@
       "bpID": 15,
       "certainty": 100,
       "errorDescription": "Presentational elements such as FONT and CENTER are often difficult or impossible to override with user styles or by disabling CSS. Since these elements are purely presentational, replace them with CSS.",
-      "errorSnippet": "<center><div style=\"height:231px;margin-top:20px\" id=\"lga\"><img alt=\"Google\" height=\"95\" id=\"hplogo\" src=\"/images/srpr/logo11w.png\" style=\"padding-top:112px\" width=\"269\" onload=\"window.lol&amp;&amp;lol()\"></div><div sty",
+      "errorSnippet": "<center><div style=\"height:231px;margin-top:20px\" id=\"lga\"><img alt=\"example\" height=\"95\" id=\"hplogo\" src=\"/images/srpr/logo11w.png\" style=\"padding-top:112px\" width=\"269\" onload=\"window.lol&amp;&amp;lol()\"></div><div sty",
       "errorTitle": "Deprecated typography coding found",
       "position": {
         "column": 12920,
@@ -118,7 +118,7 @@
       "bpID": 106,
       "certainty": 100,
       "errorDescription": "Link found which contains no text. Because Accessibility APIs use a link's text do determine its accessible name, this link will have no name and will not be announced by assistive technologies.",
-      "errorSnippet": "<a class=\"gb_D gb_Ta\" href=\"http://www.google.com/intl/en/options/\" title=\"Apps\" aria-haspopup=\"true\" aria-expanded=\"false\" data-ved=\"0CAUQvSc\" data-eqid=\"0click\"></a>",
+      "errorSnippet": "<a class=\"gb_D gb_Ta\" href=\"http://www.example.com/intl/en/options/\" title=\"Apps\" aria-haspopup=\"true\" aria-expanded=\"false\" data-ved=\"0CAUQvSc\" data-eqid=\"0click\"></a>",
       "errorTitle": "Blank link text found",
       "position": {
         "column": 0,
@@ -139,7 +139,7 @@
       "bpID": 178,
       "certainty": 100,
       "errorDescription": "Elements were found with role attributes that should be replaced with native semantics",
-      "errorSnippet": "<a class=\"_Gs\" href=\"https://www.google.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" role=\"button\" jsaction=\"foot.cst\">Settings</a>",
+      "errorSnippet": "<a class=\"_Gs\" href=\"https://www.example.com/preferences?hl=en\" id=\"fsettl\" aria-controls=\"fsett\" aria-expanded=\"false\" role=\"button\" jsaction=\"foot.cst\">Settings</a>",
       "errorTitle": "Do not apply 'role' attribute where native semantics are available",
       "position": {
         "column": 0,
