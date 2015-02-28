@@ -18,7 +18,7 @@
             <property name="fragment" value="{{request.fragment}}"/>
             <property name="store" value="{{request.store}}"/>
             {{#isStored}}
-            <property name="store.responseDetails" value="http://tenon:8888/api/results.php?responseID={{request.responseID}}"/>
+            <property name="store.responseDetails" value="https://tenon.io/api/results.php?responseID={{request.responseID}}"/>
             {{/isStored}}
         </properties>
         {{#apiErrors}}
