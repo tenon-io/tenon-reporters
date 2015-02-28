@@ -1,4 +1,4 @@
-# Tenon JSON to xUnit
+# Reporters for Tenon.io
 
 [![Build Status](https://secure.travis-ci.org/poorgeek/tenon-reporters.png?branch=master)](http://travis-ci.org/poorgeek/tenon-reporters)
 
