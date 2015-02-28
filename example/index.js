@@ -2,7 +2,7 @@
 
 // Import the module
 var fs = require('fs'),
-    convert = require('../lib/convert.js');
+    convert = require('../lib/xunit.js');
 
 fs.readFile('./test/result.json', function (err, data) {
     if (err) {
