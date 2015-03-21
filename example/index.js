@@ -2,27 +2,35 @@
 
 // Import the module
 var fs = require('fs'),
-    convert = require('../lib/html.js');
+    xmlReporter = require('../lib/html.js'),
+    htmlReporter = require('../lib/html.js');
+
+function writeExample(err, result, filename) {
+    if (err) {
+        console.error(err);
+    }
+    var path = 'example/' + filename;
+
+    fs.writeFile('./' + path, result, function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log('Tenon Response written to: ' + path);
+    });
+}
 
 fs.readFile('./test/result-url.json', function (err, data) {
     if (err) {
         throw err;
     }
 
-    console.log(JSON.parse(data.toString()));
-    
-    convert(JSON.parse(data.toString()), function(err, result) {
-        if (err) {
-            console.error(err);
-        } else {
-            console.log(result);
+    var json = JSON.parse(data.toString());
 
-            fs.writeFile('test.html', result, function (err) {
-                if (err) {
-                    return console.log(err);
-                }
-                console.log('Tenon Response written to: test.html');
-            });
-        }
+    xmlReporter(json, function(err, result) {
+        writeExample(err, result, 'xunit.xml');
+    });
+
+    htmlReporter(json, function(err, result) {
+        writeExample(err, result, 'example.html');
     });
 });

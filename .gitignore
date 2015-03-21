@@ -1,2 +1,6 @@
 /node_modules/
 npm-debug.log
+
+// Ignore files created by our example app
+example.html
+xunit.xml
