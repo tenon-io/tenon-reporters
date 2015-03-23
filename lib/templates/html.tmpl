@@ -1,55 +1,44 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <title>{{resultSummary.issues.totalErrors}} issues found for {{request.url}}</title>
+    <link rel="stylesheet" href="../lib/templates/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/templates/bootstrap-theme.min.css">
     <style>
-    td.err { width: 30%; }
-    pre { white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;}
-    code { font-family: Courier, 'New Courier', monospace; font-size: 12px;}
+    .id { width: 2%; }
+    .error { width: 50%; }
+    .result { margin-bottom: 2.5em; }
+    .line-count { float: right; }
     </style>
 </head>
 <body>
-<h1>Test Results</h1>
+    <div class="container">
+        <h1>Test Results</h1>
 
-<div class="results-data">
-    <div class="total-count">
-        <h3 id="results-title"><span>{{resultSummary.issues.totalErrors}}</span> <span>issues found for</span> <a href="{{request.url}}">{{request.url}}</a></h3>
-    </div>
-    <div class="time-label"><span>Processed in </span><span class="time-data"><span>{{responseExecTime}}</span><span>sec</span></span></div>
-    <div class="screen-label"><span>Screen Size: </span><span class="screen-data"><span>{{request.viewport.width}}</span><span>w x </span><span>{{request.viewport.height}}</span><span>h</span></span></div>
-    <div class="filesize-label"><span>Page size: </span><span class="filesize-data"><span>{{documentSize}}</span><span>kb</span></span></div>
-    <div class="score">
-        <ul id="scoreList" class="score-list" aria-live="polite">
-            <li class="passing-count"><span class="text-success">{{resultSummary.tests.total}}</span><span> total</span></li>
-            <li class="failing-count"><span class="text-danger">{{resultSummary.issues.totalErrors}}</span><span> errors</span></li>
-            <li class="warning-count"><span class="text-warning">{{resultSummary.issues.totalWarnings}}</span><span> warnings</span></li>
-        </ul>
-    </div>
-</div>
+        <div class="results-data">
+            <h2 id="results-title"><span class="total-errors">{{resultSummary.issues.totalErrors}}</span> issues found for <a href="{{request.url}}">{{request.url}}</a></h2>
+            <div class="time-label">Processed in <span class="time-data">{{responseExecTime}} sec</span></div>
+            <div class="screen-label">Screen Size: <span class="screen-data">{{request.viewport.width}}</span>w x <span class="screen-data">{{request.viewport.height}}</span>h</div>
+            <div class="filesize-label">Page size: <span class="filesize-data">{{documentSize}}</span></div>
+            <div class="score">
+                <ul id="scoreList" class="score-list" aria-live="polite">
+                    <li class="passing-count"><span class="text-success">{{resultSummary.tests.total}}</span> total</li>
+                    <li class="failing-count"><span class="text-danger">{{resultSummary.issues.totalErrors}}</span> errors</li>
+                    <li class="warning-count"><span class="text-warning">{{resultSummary.issues.totalWarnings}}</span> warnings</li>
+                </ul>
+            </div>
+        </div>
 
-<table>
-    <thead>
-        <tr>
-            <th class="id" scope="col">ID</th>
-            <th class="err" scope="col">Error</th>
-            <th class="description" scope="col">Description</th>
-            <th class="metadata" scope="col">Metadata</th>
-        </tr>
-    </thead>
-    <tbody>
+        <h2>Detailed test results</h2>
+        <ul class="result-details list-unstyled">
         {{#resultSet}}
-        <tr class="test-result">
-            <th class="id" scope="row">{{tID}}</th>
-            <td class="err">
-                <pre class="language-markup xml"><code class="xml">{{errorSnippet}}</code></pre>
-            </td>
-            <td class="description">
-                <p class="title">{{errorTitle}}</p>
+            <li class="result">
+                <p class="title h3"><span class="id">Test {{tID}}.</span> {{errorTitle}}</p>
                 <p class="description">{{description}}</p>
-            </td>
-            <td class="metadata">
-                <p class="priority">Priority: <em>{{priority}}%</em></p>
+                <pre><code class="html">{{errorSnippet}}</code></pre>
                 <p class="line-count">Location: <em>(line: {{position.line}}, col: {{position.column}})</em></p>
+
+                <p class="priority">Priority: <em>{{priority}}%</em></p>
                 <ul class="spec">
                     {{#standards}}
                     <li>{{.}}</li>
@@ -58,10 +47,9 @@
                 {{#isStored}}
                     <a class="best-practice" href="https://tenon.io/api/results.php?responseID={{request.responseID}}">Recommended Fix</a>
                 {{/isStored}}
-            </td>
-        </tr>
+            </li>
         {{/resultSet}}
-    </tbody>
-</table>
+        </ul>
+    </div>
 </body>
 </html>
