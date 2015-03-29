@@ -1,7 +1,7 @@
 {
   "name": "tenon-reporters",
   "version": "0.1.0",
-  "main": "lib/convert.js",
+  "main": "index.js",
   "description": "Convert the Tenon's JSON response to the xUnit XML format",
   "homepage": "https://github.com/poorgeek/tenon-reporters",
   "bugs": "https://github.com/poorgeek/tenon-reporters/issues",

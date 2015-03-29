@@ -2,8 +2,7 @@
 
 // Import the module
 var fs = require('fs'),
-    xmlReporter = require('../lib/html.js'),
-    htmlReporter = require('../lib/html.js');
+    reporters = require('../index');
 
 function writeExample(err, result, filename) {
     if (err) {
@@ -26,11 +25,11 @@ fs.readFile('./test/result-url.json', function (err, data) {
 
     var json = JSON.parse(data.toString());
 
-    xmlReporter(json, function(err, result) {
+    reporters.XUnit(json, function(err, result) {
         writeExample(err, result, 'xunit.xml');
     });
 
-    htmlReporter(json, function(err, result) {
+    reporters.HTML(json, function(err, result) {
         writeExample(err, result, 'example.html');
     });
 });
