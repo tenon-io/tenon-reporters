@@ -1,8 +1,8 @@
 {
   "name": "tenon-reporters",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
-  "description": "Convert the Tenon's JSON response to the xUnit XML format",
+  "description": "Display results from Tenon.io using a custom test reporter.",
   "homepage": "https://github.com/poorgeek/tenon-reporters",
   "bugs": "https://github.com/poorgeek/tenon-reporters/issues",
   "author": {
