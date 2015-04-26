@@ -32,4 +32,8 @@ fs.readFile('./test/result-url.json', function (err, data) {
     reporters.HTML(json, function(err, result) {
         writeExample(err, result, 'example.html');
     });
+
+    reporters.CSV(json, function(err, result) {
+        writeExample(err, result, 'example.csv');
+    });
 });

@@ -13,6 +13,7 @@ Use this library to report results from your [Tenon.io] tests. Currently the fol
 * HTML - A simple HTML export similar to the report you get when running a tests on Tenon.io.
 * xUnit - Return your results in the xUnit format which can be useful if you need to display your results in Jenkins/Hudson.
  * **Note**: The xUnit schema doesn't quite match up to what Tenon reports so some liberty was taken with how to display the results.
+* CSV - Displays key elements from the Tenon.io result set. Includes, resultTitle, errorTitle, errorDescription, certainty, priority, and signature.
 
 Want to see other reporters? Submit an issue or a pull-request.
 

@@ -3,4 +3,5 @@ npm-debug.log
 
 // Ignore files created by our example app
 example.html
+example.csv
 xunit.xml

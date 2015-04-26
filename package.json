@@ -24,6 +24,7 @@
     "testing"
   ],
   "dependencies": {
+    "csv-stringify": "0.0.6",
     "hogan.js": "^3.0.2"
   },
   "devDependencies": {
