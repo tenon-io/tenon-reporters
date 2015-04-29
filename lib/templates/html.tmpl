@@ -3,13 +3,88 @@
 <head>
     <meta charset="utf-8">
     <title>{{resultSummary.issues.totalErrors}} issues found for {{request.url}}</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
+    body {
+      font: 14px/1.6 "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0;
+      color: #2C2C2C;
+    }
+
+    .container {
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    h1 { font-weight: 300; }
+    h2, h3 { font-weight: 200; }
+    h2 {
+      margin: 20px 0 0 0;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #eee;
+    }
+
+    a {
+      color: #337ab7;
+      font-weight: 400;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding: 0 15px;
+      width: 100%;
+    }
+
+    ul li {
+      margin-top: 5px;
+      margin-right: 60px;
+      list-style: none;
+      border-bottom: 1px solid #eee;
+      padding: 5px 0;
+    }
+
+    ul.result-details > li {
+        border: none;
+    }
+
+    pre {
+      margin: 15px 0;
+      padding: 15px;
+      border: 1px solid #eee;
+      border-bottom-color: #ddd;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      -webkit-box-shadow: inset 0 0 10px #eee;
+      -moz-box-shadow: inset 0 0 10px #eee;
+      box-shadow: inset 0 0 10px #eee;
+      overflow-x: auto;
+    }
+
+    code {
+      font: 12px monaco, monospace;
+    }
+
+    *, *:after, *:before {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    [class*='col-'] { float: left; padding-right: 20px; }
+    [class*='col-']:last-of-type { padding-right: 0; }
+    .col-1-2 { width: 50%; }
+    .col-1-3 { width: 33.33%; }
+    .col-2-3 { width: 66.66%; }
+    .grid:after { content: ""; display: table; clear: both; }
+
     .id { width: 2%; }
     .error { width: 50%; }
     .result { margin-bottom: 2.5em; }
-    .line-count { float: right; }
+    .priority { text-align: right; }
     </style>
 </head>
 <body>
@@ -18,14 +93,18 @@
 
         <div class="results-data">
             <h2 id="results-title"><span class="total-errors">{{resultSummary.issues.totalErrors}}</span> issues found for <a href="{{request.url}}">{{request.url}}</a></h2>
-            <div class="time-label">Processed in <span class="time-data">{{responseExecTime}} sec</span></div>
-            <div class="screen-label">Screen Size: <span class="screen-data">{{request.viewport.width}}</span>w x <span class="screen-data">{{request.viewport.height}}</span>h</div>
-            <div class="filesize-label">Page size: <span class="filesize-data">{{documentSize}}</span></div>
-            <div class="score">
-                <ul id="scoreList" class="score-list" aria-live="polite">
+
+            <div class="grid">
+                <ul class="score-list col-1-2">
                     <li class="passing-count"><span class="text-success">{{resultSummary.tests.total}}</span> total</li>
                     <li class="failing-count"><span class="text-danger">{{resultSummary.issues.totalErrors}}</span> errors</li>
                     <li class="warning-count"><span class="text-warning">{{resultSummary.issues.totalWarnings}}</span> warnings</li>
+                </ul>
+
+                <ul class="meta-data col-1-2">
+                    <li class="time-label">Processed in <span class="time-data">{{responseExecTime}} sec</span></li>
+                    <li class="screen-label">Screen Size: <span class="screen-data">{{request.viewport.width}}</span>w x <span class="screen-data">{{request.viewport.height}}</span>h</li>
+                    <li class="filesize-label">Page size: <span class="filesize-data">{{documentSize}}</span></li>
                 </ul>
             </div>
         </div>
@@ -34,12 +113,15 @@
         <ul class="result-details list-unstyled">
         {{#resultSet}}
             <li class="result">
-                <p class="title h3"><span class="id">Test {{tID}}.</span> {{errorTitle}}</p>
+                <h3 class="title"><span class="id">Test {{tID}}.</span> {{errorTitle}}</h3>
                 <p class="description">{{description}}</p>
                 <pre><code class="html">{{errorSnippet}}</code></pre>
-                <p class="line-count">Location: <em>(line: {{position.line}}, col: {{position.column}})</em></p>
 
-                <p class="priority">Priority: <em>{{priority}}%</em></p>
+                <div class="grid">
+                    <div class="line-count col-1-2">Location: <em>(line: {{position.line}}, col: {{position.column}})</em></div>
+                    <div class="priority col-1-2">Priority: <em>{{priority}}%</em></div>
+                </div>
+
                 <ul class="spec">
                     {{#standards}}
                     <li>{{.}}</li>
