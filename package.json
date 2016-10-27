@@ -26,17 +26,17 @@
     "testing"
   ],
   "dependencies": {
-    "csv-stringify": "0.0.6",
+    "csv-stringify": "1.0.4",
     "hogan.js": "^3.0.2"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-mocha-cli": "^1.9.0",
-    "jshint-stylish": "^0.2.0",
-    "load-grunt-tasks": "^0.4.0",
-    "must": "^0.12.0",
-    "time-grunt": "^0.3.1"
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mocha-cli": "^2.1.0",
+    "jshint-stylish": "^2.2.1",
+    "load-grunt-tasks": "^3.5.2",
+    "must": "^0.13.2",
+    "time-grunt": "^1.4.0"
   },
   "scripts": {
     "test": "grunt test"
