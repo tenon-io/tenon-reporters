@@ -15,7 +15,9 @@
   },
   "license": "MIT",
   "files": [
-    "lib"
+    "index.js",
+    "lib",
+    "lib/templates"
   ],
   "keywords": [
     "tenon",
