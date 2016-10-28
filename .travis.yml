@@ -3,10 +3,10 @@ node_js:
 - '0.12'
 - '4'
 - '6'
-before_install: if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
-before_script:
+before_install:
+- if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
 - npm install -g grunt-cli
-- npm install
+install: npm install
 deploy:
   provider: npm
   email: poorgeek@gmail.com
