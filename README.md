@@ -1,3 +1,5 @@
+### Active maintenance of tenon-reporters has moved to [tenon-io/tenon-reporters](https://github.com/tenon-io/tenon-reporters).
+
 # Reporters for Tenon.io
 
 [![NPM](https://nodei.co/npm/tenon-reporters.png)](https://nodei.co/npm/tenon-reporters/)
