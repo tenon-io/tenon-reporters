@@ -1,8 +1,8 @@
 /*global beforeEach,describe,it*/
 'use strict';
 
-var expect = require('must'),
-    utils = require('../lib/tenon-utils.js');
+const expect = require('must');
+const utils = require('../lib/tenon-utils');
 
 describe('Tenon Utils', function() {
 

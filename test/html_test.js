@@ -1,8 +1,8 @@
 /*global describe,it*/
 'use strict';
 
-var expect = require('must'),
-    reporter = require('../lib/html.js'),
+const expect = require('must'),
+    reporter = require('../lib/html'),
     json = require('./result-url.json');
 
 describe('Reporter: html', function() {
