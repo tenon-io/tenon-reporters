@@ -1,6 +1,6 @@
 {
   "name": "@tenon-io/tenon-reporters",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0",
   "main": "index.js",
   "description": "Display results from Tenon.io using a custom test reporter.",
   "homepage": "https://github.com/tenon-io/tenon-reporters",
