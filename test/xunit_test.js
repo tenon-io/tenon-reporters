@@ -1,9 +1,9 @@
 /*global describe,it*/
 'use strict';
 
-var expect = require('must'),
-    reporter = require('../lib/xunit.js'),
-    json = require('./result-url.json');
+const expect = require('must');
+const reporter = require('../lib/xunit');
+const json = require('./result-url.json');
 
 describe('Reporter: xunit', function() {
 
