@@ -29,7 +29,7 @@
     "testing"
   ],
   "dependencies": {
-    "csv-stringify": "^6.0.5",
+    "csv-stringify": "^5.6.5",
     "hogan.js": "^3.0.2"
   },
   "devDependencies": {
