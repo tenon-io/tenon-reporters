@@ -4,7 +4,7 @@
 
 [![NPM](https://nodei.co/npm/@tenon-io/tenon-reporters.png)](https://nodei.co/npm/@tenon-io/tenon-reporters/)
 
-[![Build Status](https://secure.travis-ci.org/tenon-io/tenon-reporters.png?branch=master)](http://travis-ci.org/tenon-io/tenon-reporters) 
+[![Build Status](https://secure.travis-ci.org/tenon-io/tenon-reporters.png?branch=main)](http://travis-ci.org/tenon-io/tenon-reporters) 
 
 ## Getting Started
 
