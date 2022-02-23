@@ -2,11 +2,9 @@
 
 # Reporters for Tenon.io
 
-[![NPM](https://nodei.co/npm/tenon-reporters.png)](https://nodei.co/npm/tenon-reporters/)
+[![NPM](https://nodei.co/npm/@tenon-io/tenon-reporters.png)](https://nodei.co/npm/@tenon-io/tenon-reporters/)
 
-[![Build Status](https://secure.travis-ci.org/poorgeek/tenon-reporters.png?branch=master)](http://travis-ci.org/poorgeek/tenon-reporters) 
-![Dependencies](https://david-dm.org/poorgeek/tenon-reporters.svg)
-![Dev Dependencies](https://david-dm.org/poorgeek/tenon-reporters/dev-status.svg)
+[![Build Status](https://secure.travis-ci.org/tenon-io/tenon-reporters.png?branch=master)](http://travis-ci.org/tenon-io/tenon-reporters) 
 
 ## Getting Started
 
