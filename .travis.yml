@@ -1,17 +1,25 @@
 language: node_js
 node_js:
-- '0.12'
-- '4'
-- '6'
+- '12'
+- '14'
+- '16'
 before_install:
-- if [[ `npm -v` != 3* ]]; then npm i -g npm@3; fi
-- npm install -g grunt-cli
+- npm install -g npm grunt-cli
 install: npm install
-deploy:
-  provider: npm
-  email: poorgeek@gmail.com
-  api_key:
-    secure: A4G0cQzAwyeXCUIETp/+DhHsEtO5cyw4/T0U+eErKlMMTjRpAQlvfa/iHTj2EdNl8e5LcATGggiVVO6gF98jf55Pc+QAzHsEyvPmAh1kcO+waBDYrg5lqiKctIOavvpe6VPq8MYlHetBx/0dJQaxTBn8oohqVjxF7Lh39fBDGu4=
-  on:
-    tags: true
-    repo: poorgeek/tenon-reporters
+jobs:
+  include:
+    - stage: test
+      name: "Test cases"
+      script: npm run test
+    - stage: npm release
+      node_js: "16"
+      script: echo "Deploying to npm ..."
+      deploy:
+        provider: npm
+        api_token: '$NPM_TOKEN'
+        skip_cleanup: true
+        email: '$NPM_EMAIL'
+        on:
+          tags: true
+          all_branches: true
+          repo: tenon-io/tenon-reporters
